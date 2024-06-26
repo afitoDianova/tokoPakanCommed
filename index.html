@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commed Toko Pakan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>COMMED TOKO PAKAN</h1>
+    </header>
+    <main>
+        <div id="inputSection">
+            <table id="kasirTable">
+                <thead>
+                    <tr>
+                        <th>Nomor</th>
+                        <th>Tanggal</th>
+                        <th>Nama Barang</th>
+                        <th>Satuan Barang</th>
+                        <th>Jumlah Barang</th>
+                        <th>Harga Pabrik</th>
+                        <th>Harga Jual</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="kasirBody">
+                    <!-- Data barang akan ditambahkan di sini -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5"></td>
+                        <td id="totalHargaPabrik">0</td>
+                        <td id="totalHargaJual">0</td>
+                        <td id="totalSemua">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <form id="addItemForm">
+                <h2>Tambah Barang</h2>
+                <label for="tanggal">Tanggal:</label>
+                <input type="date" id="tanggal" required><br>
+                <label for="namaBarang">Nama Barang:</label>
+                <input type="text" id="namaBarang" required><br>
+                <label for="satuanBarang">Satuan Barang (gr/kg/L):</label>
+                <input type="text" id="satuanBarang" required><br>
+                <label for="jumlahBarang">Jumlah Barang:</label>
+                <input type="number" id="jumlahBarang" required><br>
+                <label for="hargaPabrik">Harga Pabrik:</label>
+                <input type="number" id="hargaPabrik" required><br>
+                <label for="hargaJual">Harga Jual:</label>
+                <input type="number" id="hargaJual" required><br>
+                <button type="submit">Tambah Barang</button>
+            </form>
+            <button id="saveButton">Simpan</button>
+            <button id="showDataButton">Data Tersimpan</button>
+        </div>
+        <div id="savedDataSection" style="display:none;">
+            <h2>Data Tersimpan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nomor</th>
+                        <th>Tanggal</th>
+                        <th>Nama Barang</th>
+                        <th>Satuan Barang</th>
+                        <th>Jumlah Barang</th>
+                        <th>Harga Pabrik</th>
+                        <th>Harga Jual</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="savedDataBody">
+                    <!-- Data tersimpan akan ditampilkan di sini -->
+                </tbody>
+            </table>
+            <button id="backButton">Kembali</button>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
